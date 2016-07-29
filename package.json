@@ -1,0 +1,24 @@
+{
+  "name": "windows-titlebar-color",
+  "version": "1.0.0",
+  "description": "Gets the title bar color on Windows 7, 8, 8.1 or 10",
+  "main": "WindowsAccentColors.js",
+  "author": "Florian Reuschel",
+  "license": "MIT",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loilo/windows-titlebar-color.git"
+  },
+  "keywords": [
+    "windows",
+    "node",
+    "electron",
+    "titlebar",
+    "color"
+  ],
+  "bugs": {
+    "url": "https://github.com/Loilo/windows-titlebar-color/issues"
+  },
+  "homepage": "https://github.com/Loilo/windows-titlebar-color#readme"
+}
