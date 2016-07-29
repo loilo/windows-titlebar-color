@@ -6,13 +6,14 @@ Created for usage in [Electron](https://github.com/electron/electron) apps.
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Usage
-```
+```javascript
 const winColor = require('windows-titlebar-color')
 
 console.log(winColor.titlebarColor)
 
 // could be #4ca0fe. or anything else.
-//           ^ this is at least not a completely arbitrary color since it's the default blue window chrome color that ships with Windows 8
+//           ^ this is at least not a completely arbitrary color since it's
+//             the default blue window chrome color that ships with Windows 8
 ```
 
 ## Generally Works with...
@@ -51,7 +52,7 @@ Freshly loads the colors from the Registry. This is also done on initiation so t
 #### `winColor.raw`
 Returns a hash containing the registry values from the `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM` key entries, converted to either boolean or hex color strings. For example my personal Windows 10 hash looks like this:
 
-```
+```javascript
 {
   Composition: true,
   ColorizationGlassAttribute: false,
