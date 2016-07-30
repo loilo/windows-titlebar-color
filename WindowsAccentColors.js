@@ -4,8 +4,11 @@
  */
 class WindowsAccentColors {
   constructor () {
-    this.reload()
     this.checkSupport()
+
+    if (this.isSupported) {
+      this.reload()
+    }
   }
 
   /**
@@ -66,6 +69,7 @@ class WindowsAccentColors {
       'Composition',
       'ColorizationBlurBalance',
       'ColorizationGlassAttribute',
+      'ColorizationOpaqueBlend',
       'EnableAeroPeek',
       'ColorPrevalence',
       'EnableWindowColorization'
@@ -79,6 +83,12 @@ class WindowsAccentColors {
         this.accentData[key] = this.hex2color(this.accentData[key])
       }
     })
+
+    if (this.isWin7) {
+      this.isDetectable = this.accentData.Composition === true && this.accentData.ColorizationOpaqueBlend === false
+    } else {
+      this.isDetectable = this.isSupported
+    }
   }
 
   /**

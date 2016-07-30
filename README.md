@@ -16,7 +16,7 @@ console.log(winColor.titlebarColor)
 //             the default blue window chrome color that ships with Windows 8
 ```
 
-## Generally Works with...
+## Works with...
 
 ...Windows 7, Windows 8/8.1 and Windows 10. Generally.
 
@@ -45,6 +45,9 @@ Returns the color of the title bar on an inactive window.
 
 #### `winColor.isSupported`
 Returns a boolean indicating if the running OS is generally supported to read colors from. Does not check for other limitations like those stated above.
+
+#### `winColor.isDetectable`
+Returns a boolean indicating if the running OS is supported and if a color is detectable for the title bar. (In other words: additionally checks if Aero is active in case the OS is Windows 7.)
 
 #### `winColor.reload()`
 Freshly loads the colors from the Registry. This is also done on initiation so typically you won't ever need to call this.
