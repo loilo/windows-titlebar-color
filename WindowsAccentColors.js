@@ -105,7 +105,7 @@ class WindowsAccentColors {
    */
   get titlebarColor () {
     if (this.isWin10) {
-      return this.raw.ColorPrevalence == null ? this.raw.ColorizationColor : '#ffffff'
+      return this.raw.ColorPrevalence ? this.raw.ColorizationColor : '#ffffff'
     } else {
       return this.raw.ColorizationColor
     }
