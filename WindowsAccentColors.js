@@ -44,6 +44,18 @@ class WindowsAccentColors {
   hex2bool (hex) {
     return hex !== '0x0'
   }
+  
+  /**
+   * Returns the expected text color for the given background color.
+   * @param  {string} color A hex color string in #rrggbb format
+   * @return {string} A hex color string in #rrggbb format
+   */
+  textColor (color) {
+    return (parseInt(color.substr(1, 2), 16) * 2 +
+      parseInt(color.substr(3, 2), 16) * 5 +
+      parseInt(color.substr(5, 2), 16)
+    ) <= (8 * 128) ? "#ffffff" : "#000000"
+  }
 
   /**
    * Reloads the accent color configuration from the registry
@@ -110,6 +122,14 @@ class WindowsAccentColors {
       return this.raw.ColorizationColor
     }
   }
+  
+  /**
+   * Gets the titlebar's text color
+   * @return {string} The hex code of the title bar text color
+   */
+  get titlebarTextColor () {
+    return this.textColor(this.titlebarColor)
+  }
 
   /**
    * Gets the inactive titlebar's color
@@ -122,6 +142,14 @@ class WindowsAccentColors {
     } else {
       return '#ebebeb'
     }
+  }
+  
+  /**
+   * Gets the inactive titlebar's text color
+   * @return {string} The hex code of the title bar text color when it's inactive
+   */
+  get inactiveTitlebarTextColor () {
+    return this.textColor(this.inactiveTitlebarColor)
   }
 }
 

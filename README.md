@@ -40,8 +40,14 @@ It's pretty simple. Grab the module and then go for it:
 #### `winColor.titlebarColor`
 Returns the color of the your Windows machines' title bar as a hex string.
 
+#### `winColor.titlebarTextColor`
+Returns the text color of the the title bar as a hex string.
+
 #### `winColor.inactiveTitlebarColor`
 Returns the color of the title bar on an inactive window.
+
+#### `winColor.inactiveTitlebarTextColor`
+Returns the text color of an inactive window's title bar as a hex string.
 
 #### `winColor.isSupported`
 Returns a boolean indicating if the running OS is generally supported to read colors from. Does not check for other limitations like those stated above.
