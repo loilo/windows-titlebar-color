@@ -47,7 +47,7 @@ class WindowsAccentColors {
   
   /**
    * Returns the expected text color for the given background color.
-   * @param {string} color A hex color string in #rrggbb format
+   * @param  {string} color A hex color string in #rrggbb format
    * @return {string} A hex color string in #rrggbb format
    */
   textColor (color) {
